@@ -10,4 +10,6 @@ print(f"{len(hits)} genes pass p < {P_CUTOFF}")
 
 points = results.sample(min(len(results), 5000), random_state=1)
 plt.scatter(points["log2_fold_change"], -np.log10(points["p_value"]), s=4)
+plt.xlabel("log2 fold change")
+plt.ylabel("-log10 p-value")
 plt.savefig("figures/volcano.png", dpi=300)
