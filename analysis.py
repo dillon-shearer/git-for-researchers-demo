@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-P_CUTOFF = 0.05
+P_CUTOFF = 0.01
 
 results = pd.read_csv("results/de_genes.csv")
 hits = results[results["p_value"] < P_CUTOFF]
